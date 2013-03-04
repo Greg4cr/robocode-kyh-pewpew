@@ -1,4 +1,4 @@
-robocode-pmj-dacruzer
+robocode-kyh-pewpew
 =====================
 
 Example project showing how to develop robocode robots using the Maven build system.  To install this package:
@@ -17,7 +17,7 @@ Start by following the [directions on installing Maven](http://maven.apache.org/
 
 Be sure to run mvn --version to verify that it is correctly installed.  This package has been tested using Maven 3.0.4.
 
-3. Download this robocode-pmj-dacruzer package
+3. Download this robocode-kyh-pewpew package
 ----------------------------------------------
 
 For those who do not know about git, the easiest way is to click the "ZIP" button at the top of this page, which will download the latest version of this repository as a .zip file. 
@@ -50,8 +50,8 @@ A typical output from one of these commands might be:
 [INFO] ------------------------------------------------------------------------
 [INFO] 
 [INFO] --- maven-install-plugin:2.3.1:install-file (default-cli) @ standalone-pom ---
-[INFO] Installing /Users/johnson/robocode/libs/robocode.jar to /Users/johnson/.m2/repository/net/sourceforge/robocode/robocode/1.7.4.4/robocode-1.7.4.4.jar
-[INFO] Installing /var/folders/__/qq1ydtj56n3fxtccjh9k6dk80000gn/T/mvninstall1027288217865601684.pom to /Users/johnson/.m2/repository/net/sourceforge/robocode/robocode/1.7.4.4/robocode-1.7.4.4.pom
+[INFO] Installing /Users/keone/robocode/libs/robocode.jar to /Users/keone/.m2/repository/net/sourceforge/robocode/robocode/1.7.4.4/robocode-1.7.4.4.jar
+[INFO] Installing /var/folders/__/qq1ydtj56n3fxtccjh9k6dk80000gn/T/mvninstall1027288217865601684.pom to /Users/keone/.m2/repository/net/sourceforge/robocode/robocode/1.7.4.4/robocode-1.7.4.4.pom
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
@@ -75,38 +75,38 @@ Note that this approach does not remove these files from the robocode installati
 Here is an example of the command line used to build and test the system, along with the output.
 
 ```shell
-[~/projecthosting/github/robocode-pmj-dacruzer]-> mvn -Drobocode.home=/Users/johnson/robocode test
+[~/projecthosting/github/robocode-kyh-pewpew]-> mvn -Drobocode.home=/Users/keone/robocode test
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
-[INFO] Building dacruzer 1.0-SNAPSHOT
+[INFO] Building pewpew 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
 [INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ dacruzer ---
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ pewpew ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/johnson/projecthosting/github/robocode-pmj-dacruzer/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/keone/projecthosting/github/robocode-kyh-pewpew/src/main/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ dacruzer ---
-[INFO] Compiling 1 source file to /Users/johnson/projecthosting/github/robocode-pmj-dacruzer/target/classes
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ pewpew ---
+[INFO] Compiling 1 source file to /Users/keone/projecthosting/github/robocode-kyh-pewpew/target/classes
 [INFO] 
-[INFO] --- maven-resources-plugin:2.6:copy-resources (copy-resources) @ dacruzer ---
+[INFO] --- maven-resources-plugin:2.6:copy-resources (copy-resources) @ pewpew ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 1 resource
 [INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ dacruzer ---
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ pewpew ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/johnson/projecthosting/github/robocode-pmj-dacruzer/src/test/resources
+[INFO] skip non existing resourceDirectory /Users/keone/projecthosting/github/robocode-kyh-pewpew/src/test/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ dacruzer ---
-[INFO] Compiling 3 source files to /Users/johnson/projecthosting/github/robocode-pmj-dacruzer/target/test-classes
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ pewpew ---
+[INFO] Compiling 3 source files to /Users/keone/projecthosting/github/robocode-kyh-pewpew/target/test-classes
 [INFO] 
-[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ dacruzer ---
-[INFO] Surefire report directory: /Users/johnson/projecthosting/github/robocode-pmj-dacruzer/target/surefire-reports
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ pewpew ---
+[INFO] Surefire report directory: /Users/keone/projecthosting/github/robocode-kyh-pewpew/target/surefire-reports
 
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
-Running pmj.TestDaCruzerFiring
+Running kyh.TestpewpewFiring
 Loaded net.sf.robocode.api
 Loaded net.sf.robocode.core
 Loaded net.sf.robocode.battle
@@ -122,7 +122,7 @@ Round 1 cleaning up.
 (test output deleted)
 
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.924 sec
-Running pmj.TestDaCruzerMovement
+Running kyh.TestpewpewMovement
 Preparing battle...
 ----------------------
 Round 1 initializing..
@@ -133,7 +133,7 @@ Round 1 cleaning up.
 (test output deleted)
 
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.693 sec
-Running pmj.TestDaCruzerVersusSittingDuck
+Running kyh.TestpewpewVersusSittingDuck
 Preparing battle...
 ----------------------
 Round 1 initializing..
@@ -161,16 +161,16 @@ Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 To remove the robot from the robocode installation, invoke the clean target with the -D property:
 
 ```shell
-[~/projecthosting/github/robocode-pmj-dacruzer]-> mvn -Drobocode.home=/Users/johnson/robocode clean
+[~/projecthosting/github/robocode-kyh-pewpew]-> mvn -Drobocode.home=/Users/keone/robocode clean
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
-[INFO] Building dacruzer 1.0-SNAPSHOT
+[INFO] Building pewpew 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
 [INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ dacruzer ---
-[INFO] Deleting /Users/johnson/projecthosting/github/robocode-pmj-dacruzer/target
-[INFO] Deleting /Users/johnson/robocode/robots/pmj (includes = [], excludes = [])
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ pewpew ---
+[INFO] Deleting /Users/keone/projecthosting/github/robocode-kyh-pewpew/target
+[INFO] Deleting /Users/keone/robocode/robots/kyh (includes = [], excludes = [])
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
@@ -179,12 +179,12 @@ To remove the robot from the robocode installation, invoke the clean target with
 [INFO] Final Memory: 6M/309M
 [INFO] ------------------------------------------------------------------------
 ```
-6.  Install robocode-pmj-dacruzer into Eclipse
+6.  Install robocode-kyh-pewpew into Eclipse
 ----------------------------------------------
 
 Now that the system is running from the command line, you'll want to also run it from Eclipse.  To do so, bring up Eclipse, and select File | Import | Maven | Existing Maven Projects, and then complete the dialog boxes to import your project.  Eclipse will read the POM file in order to determine the libraries to include on the build path.  
 
-To run the pmj.dacruzer robot within Eclipse, you must configure Eclipse and Robocode in the normal way:
+To run the kyh.pewpew robot within Eclipse, you must configure Eclipse and Robocode in the normal way:
   * In the Run configuration, change the working directory to your Robocode installation directory. 
   * In the Robocode window, select Options | Preferences | Development Options to add the target/classes directory so that Robocode will see your robot.
 
@@ -194,10 +194,10 @@ To run the test cases, edit the Run configuration for each test to include -Drob
 ----------------------------------------------------------
 
 Once you have completed the above steps, you are ready to use this project for your own development. To do this:
-  * Duplicate the robocode-pmj-dacruzer directory, and rename it with your own robot's name.
+  * Duplicate the robocode-kyh-pewpew directory, and rename it with your own robot's name.
   * Edit the POM file, and change the top lines to correspond to your own robot name. 
   * Import the project (as a Maven project) into Eclipse.
-  * In Eclipse, select the project (robocode-pmj-dacruzer), then right-click and Refactor | Rename to rename the project to your own robot name.
+  * In Eclipse, select the project (robocode-kyh-pewpew), then right-click and Refactor | Rename to rename the project to your own robot name.
 
 8. Quality assurance
 --------------------
@@ -211,14 +211,14 @@ Checkstyle
 To run checkstyle by itself, invoke the checkstyle:check goal:
 
 ```
-[~/projecthosting/github/robocode-pmj-dacruzer]-> mvn checkstyle:check
+[~/projecthosting/github/robocode-kyh-pewpew]-> mvn checkstyle:check
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
-[INFO] Building dacruzer 1.0-SNAPSHOT
+[INFO] Building pewpew 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
 [INFO] 
-[INFO] --- maven-checkstyle-plugin:2.9.1:check (default-cli) @ dacruzer ---
+[INFO] --- maven-checkstyle-plugin:2.9.1:check (default-cli) @ pewpew ---
 [INFO] Starting audit...
 Audit done.
 
@@ -229,7 +229,7 @@ Audit done.
 [INFO] Finished at: Tue Feb 05 11:30:49 HST 2013
 [INFO] Final Memory: 12M/309M
 [INFO] ------------------------------------------------------------------------
-[~/projecthosting/github/robocode-pmj-dacruzer]-> 
+[~/projecthosting/github/robocode-kyh-pewpew]-> 
 ```
 
 Checkstyle is configured to run the checks specified at: http://ics-software-engineering.googlecode.com/svn/trunk/configfiles/checkstyle.xml
@@ -242,20 +242,20 @@ PMD
 To run PMD by itself, invoke the pmd:check goal:
 
 ```
-[~/projecthosting/github/robocode-pmj-dacruzer]-> mvn pmd:check
+[~/projecthosting/github/robocode-kyh-pewpew]-> mvn pmd:check
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
-[INFO] Building dacruzer 1.0-SNAPSHOT
+[INFO] Building pewpew 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
 [INFO] 
-[INFO] >>> maven-pmd-plugin:2.7.1:check (default-cli) @ dacruzer >>>
+[INFO] >>> maven-pmd-plugin:2.7.1:check (default-cli) @ pewpew >>>
 [INFO] 
-[INFO] --- maven-pmd-plugin:2.7.1:pmd (pmd) @ dacruzer ---
+[INFO] --- maven-pmd-plugin:2.7.1:pmd (pmd) @ pewpew ---
 [INFO] 
-[INFO] <<< maven-pmd-plugin:2.7.1:check (default-cli) @ dacruzer <<<
+[INFO] <<< maven-pmd-plugin:2.7.1:check (default-cli) @ pewpew <<<
 [INFO] 
-[INFO] --- maven-pmd-plugin:2.7.1:check (default-cli) @ dacruzer ---
+[INFO] --- maven-pmd-plugin:2.7.1:check (default-cli) @ pewpew ---
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
@@ -264,7 +264,7 @@ To run PMD by itself, invoke the pmd:check goal:
 [INFO] Finished at: Tue Feb 05 11:31:36 HST 2013
 [INFO] Final Memory: 15M/309M
 [INFO] ------------------------------------------------------------------------
-[~/projecthosting/github/robocode-pmj-dacruzer]-> 
+[~/projecthosting/github/robocode-kyh-pewpew]-> 
 ```
 
 PMD is configured to use the rules specified at: http://ics-software-engineering.googlecode.com/svn/trunk/configfiles/pmd.rulesets.xml.
@@ -277,20 +277,20 @@ FindBugs
 To run FindBugs by itself, invoke the findbugs:check goal:
 
 ```
-[~/projecthosting/github/robocode-pmj-dacruzer]-> mvn findbugs:check
+[~/projecthosting/github/robocode-kyh-pewpew]-> mvn findbugs:check
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
-[INFO] Building dacruzer 1.0-SNAPSHOT
+[INFO] Building pewpew 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
 [INFO] 
-[INFO] >>> findbugs-maven-plugin:2.5.2:check (default-cli) @ dacruzer >>>
+[INFO] >>> findbugs-maven-plugin:2.5.2:check (default-cli) @ pewpew >>>
 [INFO] 
-[INFO] --- findbugs-maven-plugin:2.5.2:findbugs (findbugs) @ dacruzer ---
+[INFO] --- findbugs-maven-plugin:2.5.2:findbugs (findbugs) @ pewpew ---
 [INFO] 
-[INFO] <<< findbugs-maven-plugin:2.5.2:check (default-cli) @ dacruzer <<<
+[INFO] <<< findbugs-maven-plugin:2.5.2:check (default-cli) @ pewpew <<<
 [INFO] 
-[INFO] --- findbugs-maven-plugin:2.5.2:check (default-cli) @ dacruzer ---
+[INFO] --- findbugs-maven-plugin:2.5.2:check (default-cli) @ pewpew ---
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
@@ -298,7 +298,7 @@ To run FindBugs by itself, invoke the findbugs:check goal:
 [INFO] Finished at: Tue Feb 05 11:32:18 HST 2013
 [INFO] Final Memory: 15M/309M
 [INFO] ------------------------------------------------------------------------
-[~/projecthosting/github/robocode-pmj-dacruzer]-> 
+[~/projecthosting/github/robocode-kyh-pewpew]-> 
 ```
 
 FindBugs is configured to use the default rules. 
@@ -311,48 +311,48 @@ Jacoco
 Jacoco (the code coverage tool) cannot be run independently, but only as part of the verify goal, which also runs all of the preceeding quality assurance tools. Note that since code coverage requires running of the junit tests, the verify goal requires the robocode.home system property.  Here is example output from invoking the verify goal (with test case output removed):
 
 ```
-[~/projecthosting/github/robocode-pmj-dacruzer]-> mvn -Drobocode.home=/Users/johnson/robocode verify
+[~/projecthosting/github/robocode-kyh-pewpew]-> mvn -Drobocode.home=/Users/keone/robocode verify
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
-[INFO] Building dacruzer 1.0-SNAPSHOT
+[INFO] Building pewpew 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
 [INFO] 
-[INFO] --- jacoco-maven-plugin:0.6.2.201302030002:prepare-agent (prepare-agent) @ dacruzer ---
-[INFO] argLine set to -javaagent:/Users/johnson/.m2/repository/org/jacoco/org.jacoco.agent/0.6.2.201302030002/org.jacoco.agent-0.6.2.201302030002-runtime.jar=destfile=/Users/johnson/projecthosting/github/robocode-pmj-dacruzer/target/jacoco.exec
+[INFO] --- jacoco-maven-plugin:0.6.2.201302030002:prepare-agent (prepare-agent) @ pewpew ---
+[INFO] argLine set to -javaagent:/Users/keone/.m2/repository/org/jacoco/org.jacoco.agent/0.6.2.201302030002/org.jacoco.agent-0.6.2.201302030002-runtime.jar=destfile=/Users/keone/projecthosting/github/robocode-kyh-pewpew/target/jacoco.exec
 [INFO] 
-[INFO] --- maven-checkstyle-plugin:2.9.1:check (default) @ dacruzer ---
+[INFO] --- maven-checkstyle-plugin:2.9.1:check (default) @ pewpew ---
 [INFO] Starting audit...
 Audit done.
 
 [INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ dacruzer ---
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ pewpew ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/johnson/projecthosting/github/robocode-pmj-dacruzer/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/keone/projecthosting/github/robocode-kyh-pewpew/src/main/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ dacruzer ---
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ pewpew ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 1 source file to /Users/johnson/projecthosting/github/robocode-pmj-dacruzer/target/classes
+[INFO] Compiling 1 source file to /Users/keone/projecthosting/github/robocode-kyh-pewpew/target/classes
 [INFO] 
-[INFO] --- maven-resources-plugin:2.6:copy-resources (copy-resources) @ dacruzer ---
+[INFO] --- maven-resources-plugin:2.6:copy-resources (copy-resources) @ pewpew ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 1 resource
 [INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ dacruzer ---
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ pewpew ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/johnson/projecthosting/github/robocode-pmj-dacruzer/src/test/resources
+[INFO] skip non existing resourceDirectory /Users/keone/projecthosting/github/robocode-kyh-pewpew/src/test/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ dacruzer ---
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ pewpew ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 3 source files to /Users/johnson/projecthosting/github/robocode-pmj-dacruzer/target/test-classes
+[INFO] Compiling 3 source files to /Users/keone/projecthosting/github/robocode-kyh-pewpew/target/test-classes
 [INFO] 
-[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ dacruzer ---
-[INFO] Surefire report directory: /Users/johnson/projecthosting/github/robocode-pmj-dacruzer/target/surefire-reports
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ pewpew ---
+[INFO] Surefire report directory: /Users/keone/projecthosting/github/robocode-kyh-pewpew/target/surefire-reports
 
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
-Running pmj.TestDaCruzerFiring
+Running kyh.TestpewpewFiring
 Loaded net.sf.robocode.api
 Loaded net.sf.robocode.core
 Loaded net.sf.robocode.battle
@@ -371,34 +371,34 @@ Results :
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 
 [INFO] 
-[INFO] --- jacoco-maven-plugin:0.6.2.201302030002:report (report) @ dacruzer ---
+[INFO] --- jacoco-maven-plugin:0.6.2.201302030002:report (report) @ pewpew ---
 [INFO] 
-[INFO] --- maven-jar-plugin:2.3.2:jar (default-jar) @ dacruzer ---
-[INFO] Building jar: /Users/johnson/projecthosting/github/robocode-pmj-dacruzer/target/dacruzer-1.0-SNAPSHOT.jar
+[INFO] --- maven-jar-plugin:2.3.2:jar (default-jar) @ pewpew ---
+[INFO] Building jar: /Users/keone/projecthosting/github/robocode-kyh-pewpew/target/pewpew-1.0-SNAPSHOT.jar
 [INFO] 
-[INFO] >>> findbugs-maven-plugin:2.5.2:check (default) @ dacruzer >>>
+[INFO] >>> findbugs-maven-plugin:2.5.2:check (default) @ pewpew >>>
 [INFO] 
-[INFO] --- findbugs-maven-plugin:2.5.2:findbugs (findbugs) @ dacruzer ---
+[INFO] --- findbugs-maven-plugin:2.5.2:findbugs (findbugs) @ pewpew ---
 [INFO] Fork Value is true
 [INFO] Done FindBugs Analysis....
 [INFO] 
-[INFO] <<< findbugs-maven-plugin:2.5.2:check (default) @ dacruzer <<<
+[INFO] <<< findbugs-maven-plugin:2.5.2:check (default) @ pewpew <<<
 [INFO] 
-[INFO] --- findbugs-maven-plugin:2.5.2:check (default) @ dacruzer ---
+[INFO] --- findbugs-maven-plugin:2.5.2:check (default) @ pewpew ---
 [INFO] BugInstance size is 0
 [INFO] Error size is 0
 [INFO] No errors/warnings found
 [INFO] 
-[INFO] >>> maven-pmd-plugin:2.7.1:check (default) @ dacruzer >>>
+[INFO] >>> maven-pmd-plugin:2.7.1:check (default) @ pewpew >>>
 [INFO] 
-[INFO] --- maven-pmd-plugin:2.7.1:pmd (pmd) @ dacruzer ---
+[INFO] --- maven-pmd-plugin:2.7.1:pmd (pmd) @ pewpew ---
 [INFO] 
-[INFO] <<< maven-pmd-plugin:2.7.1:check (default) @ dacruzer <<<
+[INFO] <<< maven-pmd-plugin:2.7.1:check (default) @ pewpew <<<
 [INFO] 
-[INFO] --- maven-pmd-plugin:2.7.1:check (default) @ dacruzer ---
+[INFO] --- maven-pmd-plugin:2.7.1:check (default) @ pewpew ---
 [INFO] 
 [INFO] 
-[INFO] --- jacoco-maven-plugin:0.6.2.201302030002:check (check) @ dacruzer ---
+[INFO] --- jacoco-maven-plugin:0.6.2.201302030002:check (check) @ pewpew ---
 [INFO] All coverage checks have been met.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
@@ -407,7 +407,7 @@ Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] Finished at: Tue Feb 05 11:33:48 HST 2013
 [INFO] Final Memory: 38M/330M
 [INFO] ------------------------------------------------------------------------
-[~/projecthosting/github/robocode-pmj-dacruzer]-> 
+[~/projecthosting/github/robocode-kyh-pewpew]-> 
 ```
 
 Jacoco is configured to fail the build if class and method-level coverage is not 100%.  To see the coverage report, look in the target/site/jacoco directory. 
