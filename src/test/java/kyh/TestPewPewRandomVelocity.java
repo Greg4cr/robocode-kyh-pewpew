@@ -74,7 +74,7 @@ public class TestPewPewRandomVelocity extends RobotTestBed {
       this.oldMovementVelocity = robot.getVelocity();
     }
     
-    if (this.timesInARow > 3) { // If we had the same velocity more than 3 times in a row.
+    if (this.timesInARow > 30) { // If we had the same velocity more than 3 times in a row.
       this.randomVelocity = false;
     }
   }

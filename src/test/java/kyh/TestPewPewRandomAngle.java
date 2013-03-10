@@ -71,7 +71,7 @@ public class TestPewPewRandomAngle extends RobotTestBed {
       }
     }
     // Our body header was the same for 30 times in a row. 
-    if (this.timesInARow > 30) {
+    if (this.timesInARow > 100) {
       this.randomAngle =  false; // We aren't turning randomly.
     }
     this.oldAngle = robot.getBodyHeading(); // Preserving our robot's angle.

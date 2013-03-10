@@ -73,7 +73,7 @@ public class TestPewPewRandomMovement extends RobotTestBed {
         this.timesInARow = 0;
       }
     }
-    if (this.timesInARow > 30) {
+    if (this.timesInARow > 100) {
       this.randomMovement =  false;
     }
     this.oldX = robot.getX();
