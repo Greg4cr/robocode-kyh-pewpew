@@ -55,6 +55,8 @@ public class PewPew extends AdvancedRobot {
    */
   @Override
   public void onScannedRobot(ScannedRobotEvent e) {
+    // Noniterative Linear Targeting used.
+    // Code obtained from: http://robowiki.net/wiki/Linear_Targeting
     double absoluteBearing = getHeadingRadians() + e.getBearingRadians();
     setTurnGunRightRadians(Utils.normalRelativeAngle(absoluteBearing - 
     getGunHeadingRadians() + (e.getVelocity() * Math.sin(e.getHeadingRadians() - 
@@ -139,11 +141,13 @@ public class PewPew extends AdvancedRobot {
     
     
     while (true) {
-      setBodyColor(new Color((float)Math.random(),(float)Math.random(),(float)Math.random()));
-      setGunColor(new Color((float)Math.random(),(float)Math.random(),(float)Math.random()));
+      // Code that rapidly changes the color of this robot after every turn.
+      // Useful because it can give other robots seizures.
       setRadarColor(new Color((float)Math.random(),(float)Math.random(),(float)Math.random()));
       setBulletColor(new Color((float)Math.random(),(float)Math.random(),(float)Math.random()));
       setScanColor(new Color((float)Math.random(),(float)Math.random(),(float)Math.random()));
+      setBodyColor(new Color((float)Math.random(),(float)Math.random(),(float)Math.random()));
+      setGunColor(new Color((float)Math.random(),(float)Math.random(),(float)Math.random()));
       
       this.setTurnRadarRight(360);
       if (this.gameTurnsForAngle ==  30) { // After every 30 game turns, change angles.

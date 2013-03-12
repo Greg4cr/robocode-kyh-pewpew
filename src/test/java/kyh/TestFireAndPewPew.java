@@ -1,6 +1,5 @@
 package kyh;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertEquals;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import robocode.BattleResults;
@@ -44,9 +43,6 @@ public class TestFireAndPewPew extends RobotTestBed {
     BattleResults[] battleResults = event.getIndexedResults();
     // Sanity check that results[0] is PewPew.
     BattleResults pewpewResults = battleResults[0];
-    String robotName = pewpewResults.getTeamLeaderName();
-    assertEquals("Check that results[1] is PewPew", "kyh.PewPew*", robotName);
-    
     // Check to make sure PewPew won at least won over half the rounds.
     assertTrue("Check PewPew winner", getNumRounds() / 5 < pewpewResults.getFirsts());
   }

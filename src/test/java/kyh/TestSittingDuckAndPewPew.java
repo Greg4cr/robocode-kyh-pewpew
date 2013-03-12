@@ -46,7 +46,6 @@ public class TestSittingDuckAndPewPew extends RobotTestBed {
     BattleResults pewpewResults = battleResults[0];
     String robotName = pewpewResults.getTeamLeaderName();
     assertEquals("Check that results[1] is PewPew", "kyh.PewPew*", robotName);
-    
     // Check to make sure PewPew won at least won over half the rounds.
     assertTrue("Check PewPew winner", getNumRounds() / 5 < pewpewResults.getFirsts());
   }
