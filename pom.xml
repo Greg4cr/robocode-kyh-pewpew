@@ -24,59 +24,76 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>net.sourceforge.robocode</groupId>
-      <artifactId>robocode</artifactId>
-      <version>1.7.4.4</version>
+      <groupId>net.sf.robocode</groupId>
+      <artifactId>robocode.api</artifactId>
+      <version>1.9.4.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>net.sourceforge.robocode</groupId>
+      <groupId>net.sf.robocode</groupId>
       <artifactId>robocode.battle</artifactId>
-      <version>1.7.4.4</version>
+      <version>1.9.4.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>net.sourceforge.robocode</groupId>
+      <groupId>net.sf.robocode</groupId>
       <artifactId>robocode.core</artifactId>
-      <version>1.7.4.4</version>
+      <version>1.9.4.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>net.sourceforge.robocode</groupId>
+      <groupId>net.sf.robocode</groupId>
       <artifactId>robocode.repository</artifactId>
-      <version>1.7.4.4</version>
+      <version>1.9.4.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>net.sourceforge.robocode</groupId>
+      <groupId>net.sf.robocode</groupId>
       <artifactId>robocode.host</artifactId>
-      <version>1.7.4.4</version>
+      <version>1.9.4.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>net.sourceforge.robocode</groupId>
-      <artifactId>picocontainer</artifactId>
-      <version>2.14.2</version>
+      <groupId>net.sf.robocode</groupId>
+      <artifactId>robocode.sound</artifactId>
+      <version>1.9.4.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>net.sourceforge.robocode</groupId>
+      <groupId>net.sf.robocode</groupId>
+      <artifactId>robocode.ui</artifactId>
+      <version>1.9.4.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.sf.robocode</groupId>
+      <artifactId>robocode.samples</artifactId>
+      <version>1.9.4.0</version>
+      <scope>compile</scope>
+    </dependency>
+   <dependency>
+      <groupId>net.sf.robocode</groupId>
+      <artifactId>robocode.roborumble</artifactId>
+      <version>1.9.4.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.sf.robocode</groupId>
       <artifactId>robocode.testing</artifactId>
-      <version>1.7.4.4</version>
-      <scope>test</scope>
+      <version>1.9.3.5</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/lib/robocode.testing.jar</systemPath>
     </dependency>
   </dependencies>
 
   <build>
     <plugins>
-      <!-- Explicitly indicate that our source and target code is Java 7. This removes a warning from Eclipse. -->
-      <!-- More details: http://maven.apache.org/plugins/maven-compiler-plugin/compile-mojo.html -->
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.0</version>
         <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
  
@@ -142,147 +159,8 @@
           </descriptorRefs>
         </configuration>
       </plugin>
-
-      <!-- Define the checkstyle plugin: Runs automatically during verify phase. -->
-      <!-- Run separately with:  mvn checkstyle:check -->
-      <!-- More details: http://maven.apache.org/plugins/maven-checkstyle-plugin/checkstyle-mojo.html -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>2.9.1</version>
-        <executions>
-          <execution>
-            <phase>process-sources</phase>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <configLocation>http://ics-software-engineering.googlecode.com/svn/trunk/configfiles/checkstyle.xml</configLocation>
-          <consoleOutput>true</consoleOutput>
-          <includeTestSourceDirectory>true</includeTestSourceDirectory>
-          <failsOnError>true</failsOnError>
-        </configuration>
-      </plugin>
-
-      <!-- Findbugs plugin. Runs automatically during verify phase. -->
-      <!-- Run separately with: mvn findbugs:check -->
-      <!-- Details at: http://mojo.codehaus.org/findbugs-maven-plugin/check-mojo.html -->
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>findbugs-maven-plugin</artifactId>
-        <version>2.5.2</version>
-        <executions>
-          <execution>
-            <phase>verify</phase> 
-            <goals>
-              <goal>check</goal> 
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
-      <!-- PMD Plugin.  Runs automatically during verify phase. -->
-      <!-- Run separately with: mvn pmd:check -->
-      <!-- Details at: http://maven.apache.org/plugins/maven-pmd-plugin/pmd-mojo.html -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-pmd-plugin</artifactId>
-        <version>2.7.1</version>
-        <executions>
-          <execution>
-            <phase>verify</phase> 
-            <goals>
-              <goal>check</goal> 
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <verbose>true</verbose>
-          <minimumTokens>100</minimumTokens>
-          <includeTests>true</includeTests>
-          <rulesets>
-            <ruleset>http://ics-software-engineering.googlecode.com/svn/trunk/configfiles/pmd.rulesets.xml</ruleset>
-          </rulesets>
-          <targetJdk>1.6</targetJdk>
-        </configuration>
-      </plugin>
-
-
-      <!-- Jacoco Plugin.  Runs automatically during verify phase. -->
-      <!-- There is no independent way to run it at the moment.  -->
-      <!-- Details at: http://www.eclemma.org/jacoco/trunk/doc/maven.html -->
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.6.2.201302030002</version>
-        <executions>
-          <execution>
-            <id>prepare-agent</id>
-            <goals>
-              <goal>prepare-agent</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>report</id>
-            <phase>prepare-package</phase>
-            <goals>
-              <goal>report</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>check</id>
-            <goals>
-              <goal>check</goal>
-            </goals>
-            <configuration>
-              <check>
-                <classRatio>80</classRatio>
-                <methodRatio>80</methodRatio>
-              </check>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-    
-    <!--  Provided to remove a spurious error from Eclipse. -->
-    <pluginManagement>
-    	<plugins>
-    		<plugin>
-    			<groupId>org.eclipse.m2e</groupId>
-    			<artifactId>lifecycle-mapping</artifactId>
-    			<version>1.0.0</version>
-    			<configuration>
-    				<lifecycleMappingMetadata>
-    					<pluginExecutions>
-    						<pluginExecution>
-    							<pluginExecutionFilter>
-    								<groupId>org.jacoco</groupId>
-    								<artifactId>jacoco-maven-plugin</artifactId>
-    								<versionRange>[0.6.2.201302030002,)</versionRange>
-    								<goals><goal>prepare-agent</goal></goals>
-    							</pluginExecutionFilter>
-    							<action><ignore></ignore></action>
-    						</pluginExecution>
-    					</pluginExecutions>
-    				</lifecycleMappingMetadata>
-    			</configuration>
-    		</plugin>
-    	</plugins>
-    </pluginManagement>
+    </plugins> 
   </build>
 
-  <reporting>
-    <plugins>
-      <!-- Provided to remove "[WARNING] Unable to locate Source XRef to link to - DISABLED" when running PMD. -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jxr-plugin</artifactId>
-        <version>2.3</version>
-      </plugin>
-    </plugins>
-  </reporting>
 </project>
 
